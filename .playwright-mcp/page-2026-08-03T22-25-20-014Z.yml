@@ -4,7 +4,7 @@
       - link "Louisville Kids Jam" [ref=e4] [cursor=pointer]:
         - /url: /
       - link "Contact" [ref=e6] [cursor=pointer]:
-        - /url: mailto:process.env.EMAIL
+        - /url: mailto:process.env.NEXT_PUBLIC_EMAIL
       - button "Toggle menu" [ref=e7]
   - main [ref=e8]:
     - navigation "Main navigation" [ref=e9]:
@@ -12,7 +12,7 @@
         - link "Louisville Kids Jam" [ref=e11] [cursor=pointer]:
           - /url: /
         - link "Contact" [ref=e13] [cursor=pointer]:
-          - /url: mailto:process.env.EMAIL
+          - /url: mailto:process.env.NEXT_PUBLIC_EMAIL
         - button "Toggle menu" [ref=e14]
     - heading "Louisville Kids Jam - a welcoming community for kids to explore bluegrass music" [level=1] [ref=e16]
   - alert [ref=e17]

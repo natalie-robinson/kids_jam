@@ -33,7 +33,7 @@ export default function SuggestPage() {
       return;
     }
 
-    const recipient = process.env.EMAIL || '';
+    const recipient = process.env.NEXT_PUBLIC_EMAIL || '';
     const subject = encodeURIComponent('kids jam song request');
     
     let bodyContent = `Song Name: ${songName.trim()}\nURL: ${url.trim()}`;
