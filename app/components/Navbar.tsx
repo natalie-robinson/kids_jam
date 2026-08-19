@@ -9,7 +9,7 @@ const MENU_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Song library", href: "/library" },
   { label: "Suggest a song", href: "/suggest" },
-  { label: "Contact", href: `mailto:${process.env.NEXT_PUBLIC_EMAIL},${process.env.NEXT_PUBLIC_EMAIL_CC}` },
+  { label: "Contact", href: `mailto:${process.env.NEXT_PUBLIC_EMAIL}` },
   { label: "Sign up for emails", href: "/signup", disabled: true },
 ];
 

@@ -29,7 +29,7 @@ export default async function HomePage() {
       {/* Music Note Buttons */}
       <MusicNote type="triplet" label="Song library" className="absolute top-[7rem] left-20" href="/library" />
       <MusicNote type="beamed-eighth" label="Suggest a song" className="absolute top-[12rem] left-20" href="/suggest" />
-      <MusicNote type="quarter" label="Contact" className="absolute top-[17rem] left-20" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL},${process.env.NEXT_PUBLIC_EMAIL_CC}`} />
+      <MusicNote type="quarter" label="Contact" className="absolute top-[17rem] left-20" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} />
       {/* <MusicNote type="quarter" label="Sign up for emails" className="absolute top-[22rem] left-20" /> */}
 
       {/* Event Details Text */}
