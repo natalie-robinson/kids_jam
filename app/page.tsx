@@ -13,8 +13,8 @@ export default async function HomePage() {
   );
   const where = (
     <span>
-      1742 Bear Mtn. Drive<br />
-      Boulder, CO 80302
+      Rowan's grandma's house<br />
+      (contact for details)
     </span>
   );
 
