@@ -28,13 +28,13 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-20 bg-[#04141c]/70 backdrop-blur-md border-b border-white/10 px-6 py-5 flex items-center justify-between shadow-lg">
       {/* Dark Ribbon Header */}
         <div className="w-10" />
-            <div className="text-center">
-                <h1 className="text-white text-lg md:text-4xl font-bold tracking-wide leading-tight">
-                {greeting}
-                </h1>
-                <p className="text-white/70 text-medium md:text-lg font-sans pt-2">
-                {subtext}
-                </p>
+        <div className="text-center min-w-0 px-2">
+            <h1 className="text-white text-base sm:text-lg md:text-4xl font-bold tracking-wide leading-tight truncate">
+            {greeting}
+            </h1>
+            <p className="text-white/70 text-[11px] sm:text-sm md:text-lg font-sans pt-1 md:pt-2 leading-snug">
+            {subtext}
+            </p>
         </div>
 
         <HamburgerMenu

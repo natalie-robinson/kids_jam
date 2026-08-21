@@ -23,20 +23,26 @@ export default function HamburgerMenu({ items }: HamburgerMenuProps) {
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
+    function handleClickOutside(event: Event) {
+      // Don't close if tapping inside the menu container
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    // Use pointerdown instead of combining mousedown + touchstart
+    // pointerdown handles both touch and desktop click events cleanly without race conditions
+    document.addEventListener("pointerdown", handleClickOutside);
+    return () => {
+      document.removeEventListener("pointerdown", handleClickOutside);
+    };
   }, []);
 
   return (
     <div ref={menuRef} className="relative">
       {/* Animated Hamburger Button */}
       <button
+        type="button"
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-center w-12 h-12 rounded-full hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/40"
         aria-label="Toggle Menu"
@@ -67,12 +73,14 @@ export default function HamburgerMenu({ items }: HamburgerMenuProps) {
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-amber-50/95 backdrop-blur-sm rounded-xl shadow-xl py-2 z-30 border border-amber-200/50">
+        <div 
+          className="absolute right-0 mt-3 w-56 max-w-[calc(100vw-2rem)] bg-amber-50/95 backdrop-blur-md rounded-xl shadow-2xl py-2 z-50 border border-amber-200/50 transform-gpu"
+        >
           {items.map((item) =>
             item.disabled ? (
               <span
                 key={item.label}
-                className="block px-4 py-2 text-amber-900/40 cursor-not-allowed text-medium"
+                className="block px-4 py-2.5 text-amber-900/40 cursor-not-allowed text-base font-medium"
               >
                 {item.label}
               </span>
@@ -83,7 +91,7 @@ export default function HamburgerMenu({ items }: HamburgerMenuProps) {
                   setIsOpen(false);
                   item.onClick!();
                 }}
-                className="block w-full text-left px-4 py-2 text-amber-900 hover:bg-amber-100/80 transition-colors text-medium"
+                className="block w-full text-left px-4 py-2.5 text-amber-900 hover:bg-amber-100/80 active:bg-amber-200/80 transition-colors text-base font-medium"
               >
                 {item.label}
               </button>
@@ -91,7 +99,7 @@ export default function HamburgerMenu({ items }: HamburgerMenuProps) {
               <a
                 key={item.href}
                 href={item.href}
-                className="block px-4 py-2 text-amber-900 hover:bg-amber-100/80 transition-colors text-medium"
+                className="block px-4 py-2.5 text-amber-900 hover:bg-amber-100/80 active:bg-amber-200/80 transition-colors text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
@@ -100,7 +108,7 @@ export default function HamburgerMenu({ items }: HamburgerMenuProps) {
               <Link
                 key={item.href || item.label}
                 href={item.href!}
-                className="block px-4 py-2 text-amber-900 hover:bg-amber-100/80 transition-colors text-medium"
+                className="block px-4 py-2.5 text-amber-900 hover:bg-amber-100/80 active:bg-amber-200/80 transition-colors text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

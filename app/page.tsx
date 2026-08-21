@@ -13,8 +13,8 @@ export default async function HomePage() {
   );
   const where = (
     <span>
-      Rowan's House<br />
-      (contact for address)
+      1742 Bear Mtn. Drive<br />
+      Boulder, CO 80302
     </span>
   );
 
@@ -27,9 +27,11 @@ export default async function HomePage() {
       <Navbar />
         
       {/* Music Note Buttons */}
-      <MusicNote type="triplet" label="Song library" className="absolute top-[7rem] left-20" href="/library" />
-      <MusicNote type="beamed-eighth" label="Suggest a song" className="absolute top-[12rem] left-20" href="/suggest" />
-      <MusicNote type="quarter" label="Contact" className="absolute top-[17rem] left-20" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} />
+      <div className="absolute top-28 left-1/2 -translate-x-1/2 md:left-20 md:translate-x-0 flex flex-col items-start gap-5 md:gap-8">
+        <MusicNote type="triplet" label="Song library" href="/library" />
+        <MusicNote type="beamed-eighth" label="Suggest a song" href="/suggest" />
+        <MusicNote type="quarter" label="Contact" href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} />
+      </div>
       {/* <MusicNote type="quarter" label="Sign up for emails" className="absolute top-[22rem] left-20" /> */}
 
       {/* Event Details Text */}

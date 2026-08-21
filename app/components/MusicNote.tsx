@@ -108,14 +108,14 @@ export default function MusicNote({
 
   const content = (
     <div className="hex-shape">
-      <div className="flex flex-row items-center justify-center gap-3 p-10">
+      <div className="flex flex-row items-center justify-center gap-2 sm:gap-3 p-3 sm:p-10">
         {/* Icon with subtle hover scale, color shift, and ambient shadow */}
-        <span className="w-12 h-12 flex-shrink-0 flex items-center justify-center text-cyan-400 transition-all duration-300 group-hover:text-violet-300 group-hover:scale-115 [filter:drop-shadow(0_0_6px_rgba(0,0,0,0.8))] group-hover:[filter:drop-shadow(0_0_10px_rgba(251,191,36,0.5))]">
+        <span className="w-7 h-7 sm:w-12 sm:h-12 flex-shrink-0 flex items-center justify-center text-cyan-400 transition-all duration-300 group-hover:text-violet-300 group-hover:scale-115 [filter:drop-shadow(0_0_6px_rgba(0,0,0,0.8))] group-hover:[filter:drop-shadow(0_0_10px_rgba(251,191,36,0.5))]">
           {renderedIcon}
         </span>
         {label && (
           /* Text with subtle warm color transition & soft amber glow enhancement */
-          <span className="text-4xl text-yellow-200 font-bold tracking-widest text-left leading-tight pointer-events-none transition-all duration-300 [filter:drop-shadow(0_0_8px_rgba(0,0,0,0.95))] group-hover:text-cyan-300 group-hover:[filter:drop-shadow(0_0_12px_rgba(251,191,36,0.4))]">
+          <span className="text-xl sm:text-4xl text-yellow-200 font-bold tracking-widest text-left leading-tight pointer-events-none transition-all duration-300 [filter:drop-shadow(0_0_8px_rgba(0,0,0,0.95))] group-hover:text-cyan-300 group-hover:[filter:drop-shadow(0_0_12px_rgba(251,191,36,0.4))]">
             {label}
           </span>
         )}
