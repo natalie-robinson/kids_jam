@@ -9,8 +9,8 @@ const MENU_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Song library", href: "/library" },
   { label: "Suggest a song", href: "/suggest" },
-  { label: "Contact", href: `mailto:${process.env.NEXT_PUBLIC_EMAIL}` },
-  { label: "Sign up for emails", href: "/signup", disabled: true },
+  { label: "Past set lists", href: "/setlists" },
+  { label: "Contact", href: `mailto:${process.env.NEXT_PUBLIC_EMAIL}` }
 ];
 
 export default function Navbar() {
