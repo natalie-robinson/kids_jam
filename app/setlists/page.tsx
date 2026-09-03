@@ -3,22 +3,23 @@
 import Background from "../components/Background";
 import { useState, useMemo } from 'react'
 import Navbar from "../components/Navbar";
+import { getSongUrl } from "@/lib/songDictionary";
 
 // --- SONG DICTIONARY (URL MAP) ---
 const SONGS_BY_DATE: Record<string, string[]> = {
- "08/23/2026": [
-   "Salt Spring (A)", 
-   "Angeline the Baker (D)", 
-   "Salt Creek (A)", 
-   "Whiskey Before Breakfast (D)", 
-   "Blackberry Blossom (G)", 
-   "Dark Hollow (G)", 
-   "Cluck Old Hen (A)", 
-   "Old Joe Clark (A)", 
-   "Bury Me Beneath the Willow (D)", 
-   "Sitting on Top of the World (G)", 
-   "Dooley"
- ]
+  "08/23/2026": [
+    "Salt Spring (A)", 
+    "Angeline the Baker (D)", 
+    "Salt Creek (A)", 
+    "Whiskey Before Breakfast (D)", 
+    "Blackberry Blossom (G)", 
+    "Dark Hollow (G)", 
+    "Cluck Old Hen (A)", 
+    "Old Joe Clark (A)", 
+    "Bury Me Beneath the Willow (D)", 
+    "Sitting on Top of the World (G)", 
+    "Dooley"
+  ]
 };
 
 // Helper to extract key from song title for sorting
@@ -84,18 +85,32 @@ export default function SetlistPage() {
                       <th className="pb-2 pr-1">Song Title</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y-0">
-                    {setlist.songs.map((song) => (
-                      <tr key={song.raw} className="hover:bg-amber-500/5 transition-colors">
-                        <td className="py-1.5 pl-1 pr-3 text-amber-300 font-semibold text-sm">
-                          {song.key || "—"}
-                        </td>
-                        <td className="py-1.5 pr-1 text-amber-50 text-sm">
-                          {song.title}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
+<tbody className="divide-y-0">
+                        {setlist.songs.map((song) => {
+                          const url = getSongUrl(song.title);
+                          return (
+                            <tr key={song.raw} className="hover:bg-amber-500/5 transition-colors">
+                              <td className="py-1.5 pl-1 pr-3 text-amber-300 font-semibold text-sm">
+                                {song.key || "—"}
+                              </td>
+                              <td className="py-1.5 pr-1 text-sm">
+                                {url ? (
+                                  <a
+                                    href={url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-amber-50 hover:text-amber-300 underline underline-offset-2 transition-colors"
+                                  >
+                                    {song.title}
+                                  </a>
+                                ) : (
+                                  <span className="text-amber-50">{song.title}</span>
+                                )}
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
                 </table>
               </div>
             </div>
