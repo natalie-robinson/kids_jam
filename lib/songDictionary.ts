@@ -13,6 +13,7 @@ export const SONG_URL_DICTIONARY: Record<string, string> = {
   "ive_endured": "https://tabs.ultimate-guitar.com/tab/tim-obrien/ive-endured-chords-2856695",
   "salt_creek": "https://www.celticguitarmusic.com/tbot_salt_creek.htm", 
   "blackberry_blossom": "https://www.traditionalmusic.co.uk/session-guitar-tab/blackberry_blossom.htm",
+  "red_haired_boy": "https://www.youtube.com/watch?v=uP92qGlnDF8",
 };
 
 export const formatFileName = (key: string) => {
