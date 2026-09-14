@@ -14,6 +14,7 @@ export const SONG_URL_DICTIONARY: Record<string, string> = {
   "salt_creek": "https://www.celticguitarmusic.com/tbot_salt_creek.htm", 
   "blackberry_blossom": "https://www.traditionalmusic.co.uk/session-guitar-tab/blackberry_blossom.htm",
   "red_haired_boy": "https://www.youtube.com/watch?v=uP92qGlnDF8",
+  "blue_ridge_cabin_home": "https://www.idahobluegrassassociation.org/uploads/1/2/9/6/12965144/bbj_-_blue_ridge_cabin_home_-_melody_in_a.pdf",
 };
 
 export const formatFileName = (key: string) => {
