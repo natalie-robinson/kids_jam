@@ -9,7 +9,7 @@ export const SONG_URL_DICTIONARY: Record<string, string> = {
   "long_journey_home": "https://www.traditionalmusic.co.uk/top-folksongs-chords/pdf/long-journey-home.pdf",
   "salt_spring": "https://musescore.com/user/8636681/scores/17562820?srsltid=AfmBOor2AG9JquWhdsFUoWN7PLu1z_IUI8R7TzZammr_qc2JtNWpaqZ-f",
   "whiskey_before_breakfast": "https://www.traditionalmusic.co.uk/session-mandolin-tab/pdf/whisky_before_breakfast-mandolin-tab.pdf",
-  "squirrel_hunter": "https://www.traditionalmusic.co.uk/session-mandolin-tab/pdf/squirrel_hunter-mandolin-tab.pdf",
+  "squirrel_hunters": "https://www.traditionalmusic.co.uk/session-mandolin-tab/pdf/squirrel_hunter-mandolin-tab.pdf",
   "ive_endured": "https://tabs.ultimate-guitar.com/tab/tim-obrien/ive-endured-chords-2856695",
   "salt_creek": "https://www.celticguitarmusic.com/tbot_salt_creek.htm", 
   "blackberry_blossom": "https://www.traditionalmusic.co.uk/session-guitar-tab/blackberry_blossom.htm",

@@ -27,12 +27,13 @@ const SONGS_BY_DATE: Record<string, string[]> = {
   "10/25/2026": [
     "Angeline the Baker (D)",
     "Whiskey Before Breakfast (D)", 
-    "Old Joe Clark (A)",
     "Salt Spring (A)",
-    "Big Sciota (G)",
+    "Old Joe Clark (A)",
     "Blackberry Blossom (G)", 
-    "Dark Hollow (G)",  
+    "Squirrel Hunters (A)",
+    "Big Sciota (G)",
     "Sitting on Top of the World (G)",
+    "Dark Hollow (G)", 
     "Pear Tree (G)",
     "Bury Me Beneath the Willow (D)",
   ]
