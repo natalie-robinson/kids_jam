@@ -15,6 +15,8 @@ export const SONG_URL_DICTIONARY: Record<string, string> = {
   "blackberry_blossom": "https://www.traditionalmusic.co.uk/session-guitar-tab/blackberry_blossom.htm",
   "red_haired_boy": "https://www.youtube.com/watch?v=uP92qGlnDF8",
   "blue_ridge_cabin_home": "https://www.idahobluegrassassociation.org/uploads/1/2/9/6/12965144/bbj_-_blue_ridge_cabin_home_-_melody_in_a.pdf",
+  "pear_tree": "https://www.youtube.com/watch?v=e9YaNV2w_Es",
+  "big_sciota": "https://musescore.com/timroust/big-sciota?srsltid=AYCX9vKWnCz7FrhUaXVQ6jVdamNTcVGk7_BoaU2JCTLwZnvD-3sjvL9i",
 };
 
 export const formatFileName = (key: string) => {

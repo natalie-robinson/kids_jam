@@ -7,8 +7,8 @@ export default async function HomePage() {
   const when = (
     <span>
       Next Jam:<br />
-      September 20th<br />
-      10:30AM-12:00PM
+      November 15th<br />
+      3:00PM-5:00PM
     </span>
   );
   const where = (

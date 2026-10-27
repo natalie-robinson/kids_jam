@@ -19,6 +19,22 @@ const SONGS_BY_DATE: Record<string, string[]> = {
     "Bury Me Beneath the Willow (D)", 
     "Sitting on Top of the World (G)", 
     "Dooley"
+  ],
+  "09/20/2026": [
+    "Pear Tree (G)", 
+    "Sitting on Top of the World (G)"
+  ],
+  "10/25/2026": [
+    "Angeline the Baker (D)",
+    "Whiskey Before Breakfast (D)", 
+    "Old Joe Clark (A)",
+    "Salt Spring (A)",
+    "Big Sciota (G)",
+    "Blackberry Blossom (G)", 
+    "Dark Hollow (G)",  
+    "Sitting on Top of the World (G)",
+    "Pear Tree (G)",
+    "Bury Me Beneath the Willow (D)",
   ]
 };
 
