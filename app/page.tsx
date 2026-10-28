@@ -7,7 +7,7 @@ export default async function HomePage() {
   const when = (
     <span>
       Next Jam:<br />
-      November 15th<br />
+      TBD<br />
       3:00PM-5:00PM
     </span>
   );
